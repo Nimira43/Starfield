@@ -3,5 +3,15 @@ import './starIndicator.js'
 
 drawStars()
 
-console.log(stars)
+console.log('🌌 Star Registry:')
+
+stars.forEach(star => {
+  console.log(`⭐ ${star.name}`)
+  star.planets.forEach(planet => {
+    console.log(`   🪐 ${planet.name} (${planet.type}${planet.habitability ? ', ' + planet.habitability : ''})`)
+    planet.moons.forEach(moon => {
+      console.log(`      🌙 ${moon}`)
+    })
+  })
+})
 
