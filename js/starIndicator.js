@@ -1,11 +1,14 @@
 import { stars } from './starGenie.js'
+import { getCanvas } from './canvasContext.js'
 
 document.addEventListener('DOMContentLoaded', () => {
+  
   const starIndicator = document.createElement('div')
   starIndicator.className = 'indicator'
   document.body.appendChild(starIndicator)
 
-  CANVAS.addEventListener('mousemove', (e) => {
+  const canvas = getCanvas()
+  canvas.addEventListener('mousemove', (e) => {
     const { offsetX, offsetY } = e
 
     const hovered = stars.find(
