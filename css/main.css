@@ -7,6 +7,7 @@
 :root {
   --dark: #000;
   --light: #fffdfa;
+  --gold: #ffd700;
 }
 
 body {
@@ -26,7 +27,7 @@ body {
   position: absolute;
   z-index: 1000;
   background: rgba(0, 0, 0, 0.8);
-  border: 1px solid yellow;
+  border: 1px solid var(--gold);
   color: var(--light);
   padding: 6px 10px;
   border-radius: 4px;

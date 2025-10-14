@@ -9,10 +9,7 @@ export default function generateName() {
   'elu', 'ina', 'oro', 'umi', 'esa', 'ilo', 'ani', 'eya', 'iso', 'ure'
 ]
 
-
-
   const count = Math.floor(Math.random() * 3) + 2
-   
   let name = ''
 
   for (let i = 0; i < count; i++) {
