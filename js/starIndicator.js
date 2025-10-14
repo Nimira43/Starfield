@@ -21,7 +21,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (hovered) {
       starIndicator.style.left = `${offsetX + 10}px`
       starIndicator.style.top = `${offsetY + 10}px`
-      starIndicator.innerText = `${hovered.name}\nPlanets: ${hovered.planets.join(', ')}`
+      starIndicator.innerText = `${hovered.name}\nPlanets:\n` +
+  hovered.planets.map(p => 
+    `• ${p.name} (${p.type}${p.habitability ? ', ' + p.habitability : ''}, ${p.moons.length} moon${p.moons.length !== 1 ? 's' : ''})`
+  ).join('\n')
 
       starIndicator.style.display = 'block'
     } else {

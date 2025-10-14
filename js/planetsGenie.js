@@ -13,7 +13,7 @@ function getHabitability() {
 
 function getMoons(type) {
   const range = type === 'solid' ? [0, 3] : [3, 10]
-  const count = Math.floor(Math.random) * (range[1] - range[0] + 1) + range
+  const count = Math.floor(Math.random() * (range[1] - range[0] + 1)) + range[0]
   return Array.from({
     length: count
   }, () => generateName())
