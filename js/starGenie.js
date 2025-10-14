@@ -1,4 +1,5 @@
 import { CANVAS, CTX } from './constants.js'
+import generateName from './starNameGenie.js'
 
 CANVAS.width = window.innerWidth
 CANVAS.height = window.innerHeight
@@ -10,10 +11,6 @@ const stars = Array.from({ length: 1000 }, () => ({
   name: generateName(),
   planets: generatePlanets()
 }))
-
-function generateName() {
-  return 'Name'
-}
 
 function generatePlanets() {
   return 'Planets'
