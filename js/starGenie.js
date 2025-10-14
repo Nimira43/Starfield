@@ -23,4 +23,4 @@ function drawStars() {
   })
 }
 
-export default drawStars
+export { drawStars, stars }

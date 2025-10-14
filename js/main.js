@@ -1,5 +1,5 @@
-import drawStars from './starGenie.js'
+import {drawStars, stars} from './starGenie.js'
 
 drawStars()
 
-console.log(drawStars())
+console.log(stars)
