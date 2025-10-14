@@ -4,6 +4,12 @@ function getPlanetType() {
   return Math.random() < 0.65 ? 'solid' : 'gas' 
 }
 
+function getHabitability() {
+  const roll = Math.random()
+  if (roll < 0.1) return 'inhabited'
+  if (roll < 0.3) return 'uninhabited'
+  return 'uninhabitable'
+}
 
 export default function generatePlanets() {
   const num = Math.floor(Math.random() * 9) + 1
