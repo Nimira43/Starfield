@@ -3,3 +3,32 @@
 * {
   font-family: 'VT323', monospace;
 }
+
+:root {
+  --dark: #000;
+  --light: #fffdfa;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  background-color: --dark;
+}
+
+.starfield {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.tooltip {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.8);
+  color: var(--light);
+  padding: 6px 10px;
+  border-radius: 4px;
+  pointer-events: none;
+  white-space: pre;
+  display: none;
+}
+
