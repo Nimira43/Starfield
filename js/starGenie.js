@@ -2,24 +2,27 @@ import { getCanvas, getCtx } from './canvasContext.js'
 import generateName from './starNameGenie.js'
 import generatePlanets from './planetsGenie.js'
 
-CANVAS.width = window.innerWidth
-CANVAS.height = window.innerHeight
+const canvas = getCanvas()
+const ctx = getCtx()
+
+canvas.width = window.innerWidth
+canvas.height = window.innerHeight
 
 const stars = Array.from({ length: 1000 }, () => ({
-  x: Math.random() * CANVAS.width,
-  y: Math.random() * CANVAS.height,
+  x: Math.random() * canvas.width,
+  y: Math.random() * canvas.height,
   radius: Math.random() * 1.5 + 0.5,
   name: generateName(),
   planets: generatePlanets()
 }))
 
 function drawStars() {
-  CTX.clearRect(0, 0, CANVAS.width, CANVAS.height)
-  CTX.fillStyle = '#fff'
+  ctx.clearRect(0, 0, canvas.width, canvas.height)
+  ctx.fillStyle = '#fff'
   stars.forEach(({x, y, radius }) => {
-    CTX.beginPath()
-    CTX.arc(x, y, radius, 0, Math.PI * 2)
-    CTX.fill()
+    ctx.beginPath()
+    ctx.arc(x, y, radius, 0, Math.PI * 2)
+    ctx.fill()
   })
 }
 
