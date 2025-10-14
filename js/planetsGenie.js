@@ -22,5 +22,13 @@ function getMoons(type) {
 export default function generatePlanets() {
   const num = Math.floor(Math.random() * 9) + 1
 
-  return Array.from({ length: num }, () => generateName())
+  return Array.from({ length: num }, () => {
+    const type = getPlanetType()
+    return {
+      name: generateName(),
+      type,
+      habitability: type === 'solid' ? getHabitability() : null,
+      moons: getMoons(type)
+    }
+  })
 }
