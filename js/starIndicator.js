@@ -1,9 +1,9 @@
-import { CANVAS, STAR_INDICATOR } from './constants.js'
 import { stars } from './starGenie.js'
 
 document.addEventListener('DOMContentLoaded', () => {
-  STAR_INDICATOR.className = 'indicator'
-  document.body.appendChild(STAR_INDICATOR)
+  const starIndicator = document.createElement('div')
+  starIndicator.className = 'indicator'
+  document.body.appendChild(starIndicator)
 
   CANVAS.addEventListener('mousemove', (e) => {
     const { offsetX, offsetY } = e
@@ -16,17 +16,17 @@ document.addEventListener('DOMContentLoaded', () => {
     )
 
     if (hovered) {
-      STAR_INDICATOR.style.left = `${offsetX + 10}px`
-      STAR_INDICATOR.style.top = `${offsetY + 10}px`
-      STAR_INDICATOR.innerText = `${hovered.name}\nPlanets: ${hovered.planets.join(', ')}`
+      starIndicator.style.left = `${offsetX + 10}px`
+      starIndicator.style.top = `${offsetY + 10}px`
+      starIndicator.innerText = `${hovered.name}\nPlanets: ${hovered.planets.join(', ')}`
 
-      STAR_INDICATOR.style.display = 'block'
+      starIndicator.style.display = 'block'
     } else {
-      STAR_INDICATOR.style.display = 'none'
+      starIndicator.style.display = 'none'
     }
   })
   console.log('Canvas:', CANVAS)
 console.log('Stars:', stars)
-console.log('Indicator created:', STAR_INDICATOR)
+console.log('Indicator created:', starIndicator)
 
 })

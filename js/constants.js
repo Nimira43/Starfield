@@ -1,5 +1,10 @@
-const CANVAS = document.getElementById('starfield')
-const CTX = CANVAS.getContext('2d')
-const STAR_INDICATOR = document.createElement('div')
+export function getCanvas() {
+  return document.getElementById('starfield')
+} 
 
-export { CANVAS, CTX, STAR_INDICATOR}
+export function getCtx() {
+  const canvas = getCanvas()
+  return canvas ? canvas.getContext('2d') : null
+}
+
+export 
