@@ -1,4 +1,4 @@
 const CANVAS = document.getElementById('starfield')
-const CTX = canvas.getContext('2d')
+const CTX = CANVAS.getContext('2d')
 
 export { CANVAS, CTX}
