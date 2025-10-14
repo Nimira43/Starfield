@@ -28,8 +28,5 @@ document.addEventListener('DOMContentLoaded', () => {
       starIndicator.style.display = 'none'
     }
   })
-  console.log('Canvas:', CANVAS)
-console.log('Stars:', stars)
-console.log('Indicator created:', starIndicator)
 
 })
