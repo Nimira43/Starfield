@@ -1,4 +1,4 @@
-import { CANVAS, CTX } from './constants.js'
+import { getCanvas, getCtx } from './canvasContext.js'
 import generateName from './starNameGenie.js'
 import generatePlanets from './planetsGenie.js'
 

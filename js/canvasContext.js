@@ -7,4 +7,3 @@ export function getCtx() {
   return canvas ? canvas.getContext('2d') : null
 }
 
-export 
