@@ -1,3 +1,7 @@
-export default generatePlanets() {
-  
+import generateName from './starNameGenie.js'
+
+export default function generatePlanets() {
+  const num = Math.floor(Math.random() * 5) + 1
+
+  return Array.from({ length: num }, () => generateName())
 }
