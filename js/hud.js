@@ -64,7 +64,7 @@ export function createHud(root, { onNew, onCopy, onRandom, onSearch }) {
         <span>Habitable, unclaimed</span><b class='green'>${fmt(stats.habitable)}</b>
         <div class='hud-classes'>${STELLAR_CLASSES.map(
           (c) =>
-            `<span title='${c.label}'><i class='class-dot' style='color:${c.colour}background:${c.colour}'></i>${c.code} ${fmt(stats.byClass[c.code])}</span>`,
+            `<span title='${c.label}'><i class='class-dot' style='color:${c.colour};background:${c.colour}'></i>${c.code} ${fmt(stats.byClass[c.code])}</span>`,
         ).join('')}</div>`
     },
 

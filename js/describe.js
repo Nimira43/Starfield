@@ -32,7 +32,7 @@ export function habTag(habitability, { showUninhabitable = false } = {}) {
 }
 
 export function classLine(star) {
-  return `<i class="class-dot" style="color:${star.cls.colour}background:${star.cls.colour}"></i>${star.cls.code}-type ${star.cls.label}`
+  return `<i class="class-dot" style="color:${star.cls.colour};background:${star.cls.colour}"></i>${star.cls.code}-type ${star.cls.label}`
 }
 
 export function starTooltipHtml(star, system) {
